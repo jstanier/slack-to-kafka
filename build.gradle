@@ -1,0 +1,28 @@
+group 'org.jstanier.slacktokafka'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-actuator:1.2.6.RELEASE')
+    compile('org.springframework.boot:spring-boot-starter-remote-shell:1.2.6.RELEASE')
+    compile('org.springframework.boot:spring-boot-starter-web:1.2.6.RELEASE')
+    compile('com.ullink.slack:simpleslackapi:0.4.6')
+    compile('org.apache.kafka:kafka_2.10:0.8.2.2') {
+        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+    }
+    testCompile('org.springframework.boot:spring-boot-starter-test:1.2.6.RELEASE')
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.7'
+}
+
