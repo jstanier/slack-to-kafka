@@ -1,4 +1,4 @@
-package com.jstanier.slacktokafka;
+package com.jstanier.slacktokafka.message;
 
 import com.ullink.slack.simpleslackapi.SlackSession;
 import org.springframework.beans.factory.ObjectFactory;

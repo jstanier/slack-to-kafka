@@ -1,4 +1,4 @@
-package com.jstanier.slacktokafka;
+package com.jstanier.slacktokafka.message;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
