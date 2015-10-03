@@ -1,7 +1,7 @@
 # slack-to-kafka
 ## What does this do?
 
-It's a standalone application that will push all of the messages from the channel that your [Slack bot](https://api.slack.com/bot-users) is in to [Apache Kafka](http://kafka.apache.org).
+It's a standalone application that will push all of the messages from the channel that your [Slack bot](https://api.slack.com/bot-users) is in to [Apache Kafka](http://kafka.apache.org). They're pushed as JSON.
 
 ## Pre-requisites
 
