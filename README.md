@@ -17,4 +17,4 @@ Copy the [`application_sample.yml`](https://github.com/jstanier/slack-to-kafka/b
 You may already have Kafka running on your machine or on a remote machine. If so, then good for you! Provide the list of VIP brokers to the `application.yml` file along with the topic that you'll want messages pushed to.
 
 ## Building and running the application
-TBD
+Simply do `gradle run`.
