@@ -30,6 +30,7 @@ public class SlackMessageProcessor {
     @PostConstruct
     public void setup() {
         objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_EMPTY);
     }
 
     public void process(SlackMessagePosted message) {
