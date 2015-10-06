@@ -1,5 +1,6 @@
 package com.jstanier.slacktokafka.message;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ullink.slack.simpleslackapi.events.SlackMessagePosted;
@@ -10,6 +11,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
 
 @Component
 public class SlackMessageProcessor {
@@ -23,6 +26,11 @@ public class SlackMessageProcessor {
     private String kafkaTopic;
 
     private ObjectMapper objectMapper = new ObjectMapper();
+
+    @PostConstruct
+    public void setup() {
+        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+    }
 
     public void process(SlackMessagePosted message) {
         try {
