@@ -5,8 +5,10 @@ repositories {
     mavenCentral()
 }
 
-apply plugin: 'java'
+apply plugin: 'application'
 apply plugin: 'idea'
+
+mainClassName = "com.jstanier.slacktokafka.Main"
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -19,6 +21,7 @@ dependencies {
         exclude group: 'org.slf4j', module: 'slf4j-log4j12'
     }
     testCompile('org.springframework.boot:spring-boot-starter-test:1.2.6.RELEASE')
+    testCompile('org.mockito:mockito-all:1.9.5')
 }
 
 task wrapper(type: Wrapper) {
