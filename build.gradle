@@ -3,6 +3,7 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 apply plugin: 'application'
@@ -16,7 +17,7 @@ targetCompatibility = 1.8
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-actuator:1.2.6.RELEASE')
     compile('org.springframework.boot:spring-boot-starter-remote-shell:1.2.6.RELEASE')
-    compile('com.ullink.slack:simpleslackapi:0.4.6')
+    compile('com.ullink.slack:simpleslackapi:0.4.7')
     compile('org.apache.kafka:kafka_2.10:0.8.2.2') {
         exclude group: 'org.slf4j', module: 'slf4j-log4j12'
     }
